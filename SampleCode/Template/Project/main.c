@@ -281,7 +281,7 @@ void Breathing_LED(void)
 	static uint16_t duty = 0;	
 	uint16_t resolution = 0;
 	
-	#if 0	// resolution : 100 , 15ms change duty , total duty change timing from 0 ~ 100 % (or 100% ~ 0%) will be 15*100 = 1500 ms
+	#if 1	// resolution : 100 , 15ms change duty , total duty change timing from 0 ~ 100 % (or 100% ~ 0%) will be 15*100 = 1500 ms
 	if ((get_tick() % 15) == 0)		// target : 1.5 sec (duty from 0 to 100) , 1.5 sec (duty from 100 to 0)
 	{
 		resolution = PWM_RESOLUTION;
